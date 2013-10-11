@@ -16,18 +16,22 @@ Stuff that JavaScript should have
 
 ### store()
 gets and sets values in localStorage
+
 myApp.store('last used', 'today');
 
 ### properCase()
 Converts a string to Propper Case
+
 myApp.properCase('the quick brown fox'); //The quick brown fox
 
 ### round(number, decimal places)
 rounds to the specified decimal places
+
 myApp.round(123.456, 2); //123.45
 
 ### contain(low number, middle number, high number)
 Contains a given number between two other numbers.
+
 var x = 121;
 var containedX = myApp.contain(1, x, 100);
 //containedX = 100

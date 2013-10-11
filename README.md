@@ -20,7 +20,7 @@ gets and sets values in localStorage
 myApp.store('last used', 'today');
 
 ### properCase()
-Converts a string to Propper Case
+Converts a string to proper case
 
 myApp.properCase('the quick brown fox'); //The quick brown fox
 

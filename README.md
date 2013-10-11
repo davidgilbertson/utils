@@ -58,18 +58,18 @@ Kind of like an advanced prompt()
 Accepts a data model as one of the options. The popup prompt is shown (for example, with fields for name, description and phone number) and the onSave event will return the model with the data filled in.
 
 myApp.popup({
-  heading: 'Enter your details',
-  modelDef: [
-    {name: 'name', el: '<input type="text" maxlength="50">', value: ''},
-    {name: 'description', el: '<textarea>', value: ''},
-    {name: 'history', el: '<textarea>', value: ''}
-  ],
-  onSave: function(model) {
-    //do something with the model
-  },
-  onClose: function() {
-    //do something on close
-  }
+heading: 'Enter your details',
+modelDef: [
+{name: 'name', el: '<input type="text" maxlength="50">', value: ''},
+{name: 'description', el: '<textarea>', value: ''},
+{name: 'history', el: '<textarea>', value: ''}
+],
+onSave: function(model) {
+//do something with the model
+},
+onClose: function() {
+//do something on close
+}
 });
 
 

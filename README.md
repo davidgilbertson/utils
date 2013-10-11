@@ -123,34 +123,6 @@ myApp.popup({
 });
 ```
 
-## rest_sync.js
-
-### sync(options)
-A function for working with a rest server.
-Accepts an object with the following properties
-
-`method` 'create' | 'read' | 'update' | 'delete'
-
-`id` must be supplied when the method is 'read'
-
-`modelType` must be supplied when the method isn't read. Defines the endpoint of the URL. e.g. 'user' | 'taskItem'
-
-`model` the model object
-
-`success` a callback function called when the request completes
-
-#### Example
-```javascript
-myApp.sync({
-	method: 'create',
-	modelType: 'user',
-	model: userModel,
-	callback: function(response) {
-		//do something with the response
-	}
-});
-```
-
 ## timer.js
 ### timer()
 Set points in your code to measure time between. All runs are remembered and can be logged to a pretty table in the console.

@@ -112,8 +112,6 @@ success: a callback function called when the request completes
 		method: 'create',
 		modelType: 'user',
 		model: userModel,
-		startMsg: 'Adding a new user',
-		endMsg: 'New user added',
 		callback: function(response) {
 			//do something with the response
 		}

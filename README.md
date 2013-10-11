@@ -4,9 +4,11 @@ utils
 A bunch of utilities that I use. If you're here, and would also like to use them, sweet!
 But please forgive the mess. There is sometimes jQuery dependencies, sometimes not, and my explanations are for future David, so may not make perfect sense to you.
 
+Also, some of the graphical elements (right click menu and popup) will require css to get them looking hot.
+
 ## log.js
 ### log()
-Draws a logging window on the screen, cool for when there's no console (e.g. mobile)
+Draws a logging window on the screen, cool for when there's no console (e.g. mobile). You can drag the log window around the screen so it doesn't get in the way.
 
 	myApp.log('log this data');
 
@@ -52,8 +54,26 @@ Returns a GUID
 Things that do things on the screen
 
 ### rightClick(x, y, items)
-To be called from a contextmenu event. Takes an array of items to show in the right click menu.
-The jQuery element is returned. Click events on the items in the right click menu can then be handled by the element's id.
+To be called from a contextmenu event. Takes an array of items to show in the right click menu, and returns a jQuery object. Click events are then obviously bound to whatever right click items there were.
+
+	var items = [
+		{id: 'rc-add', name: 'Add Something'},
+		{id: 'rc-edit', name: 'Edit This Thing'},
+		{id: 'rc-rename', name: 'Rename...'},
+		'hr',
+		{id: 'rc-delete', name: 'Delete'}
+	];
+	
+	var $rc = myApp.rightClick(e.pageX, e.pageY, items);
+	$rc.on('click', function(e) {
+		if (e.target.id === 'rc-add') {
+			//Add something
+		}
+		if (e.target.id === 'rc-edit') {
+			//Edit this thing
+		}
+	});
+
 
 ### popup(options)
 Kind of like an advanced prompt()

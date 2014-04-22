@@ -1,10 +1,8 @@
 utils
 =====
 
-A bunch of utilities that I use. If you're here, and would also like to use them, sweet!
-But please forgive the mess. There is sometimes jQuery dependencies, sometimes not, and my explanations are for future David, so may not make perfect sense to you.
-
-Also, some of the graphical elements (right click menu and popup) will require css to get them looking hot.
+A collection of utilities that I use. If you're here, and would also like to use them, sweet!
+Please keep in mind that the examples are only semi-polished; there is sometimes a jQuery dependency and some of the graphical elements (right click menus and popups) will require css to get them looking great.
 
 ## log.js
 ### log()
